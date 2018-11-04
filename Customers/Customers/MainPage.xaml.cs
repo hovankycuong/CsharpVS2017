@@ -26,6 +26,17 @@ namespace Customers
     public MainPage()
     {
       this.InitializeComponent();
+      List<string> titles = new List<string>
+      {
+          "Mr", "Mrs", "Ms", "Miss"
+      };
+      this.title.ItemsSource = titles;
+      this.cTitle.ItemsSource = titles;
+      ViewModel viewModel = new ViewModel();
+      this.DataContext = viewModel;
+      
+
+      /*
       Customer customer = new Customer
       {
         CustomerID = 1,
@@ -37,7 +48,7 @@ namespace Customers
       };
 
       this.DataContext = customer;
-      
+      */
       
     }
   }
